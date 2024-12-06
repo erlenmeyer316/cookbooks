@@ -2,3 +2,5 @@ shell/bash_var-encrypt/private.key
 shell/bash_var-encrypt/public.key
 shell/bash_file-encrypt/private.key
 shell/bash_file-encrypt/public.key
+shell/bash_file-encrypt/SecretMessage.txt.denc
+shell/bash_file-encrypt/SecretMessage.txt.enc
