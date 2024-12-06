@@ -8,16 +8,10 @@ FILE_ENC=SecretMessage.txt.enc
 FILE_DENC=SecretMessage.txt.denc
 
 #
-# ssh keys
-#
-SSH_PUB=$HOME/.ssh/id_ed25519.pub
-SSH_PRIV=$HOME/.ssh/id_ed25519
-
-#
 # ssl key
 #
-SSL_PUB=$HOME/.config/public.key
-SSL_PRIV=$HOME/.config/private.key
+SSL_PUB=public.key
+SSL_PRIV=private.key
 
 #
 # generate the private ssl key
