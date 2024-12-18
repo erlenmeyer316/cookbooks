@@ -3,8 +3,8 @@
 if [ -f .env ]; then
     set -a; source .env; set +a;
     
-    echo ".env vault location: ${VAULT}"
-    echo ".env vault password: ${PASSWORD}"
+    # echo ".env vault location: ${VAULT}"
+    # echo ".env vault password: ${PASSWORD}"
 
     export KPXC_VAULT="${VAULT}"
     export KPXC_PASSWORD="${PASSWORD}"
@@ -12,15 +12,15 @@ if [ -f .env ]; then
     unset VAULT
     unset PASSWORD
 
-    rm .env
+    # rm .env
 fi 
 
-echo ".env vault location: ${VAULT}"
-echo ".env vault password: ${PASSWORD}"
+# echo ".env vault location: ${VAULT}"
+# echo ".env vault password: ${PASSWORD}"
 
-echo "ENV vault location: ${KPXC_VAULT}"
-echo "ENV vault password: ${KPXC_PASSWORD}"
-
+# echo "ENV vault location: ${KPXC_VAULT}"
+# echo "ENV vault password: ${KPXC_PASSWORD}"
+echo "google.com secret"
 echo "${KPXC_PASSWORD}" | keepassxc-cli show -qsa password "${KPXC_VAULT}" google.com 
 
 source subtask.sh

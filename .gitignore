@@ -4,3 +4,6 @@ shell/bash_file-encrypt/private.key
 shell/bash_file-encrypt/public.key
 shell/bash_file-encrypt/SecretMessage.txt.denc
 shell/bash_file-encrypt/SecretMessage.txt.enc
+shell/bash_kpxc-filegen/.env
+shell/bash_kpxcauth/.env
+shell/bash_kpxc-filegen/secretfile
