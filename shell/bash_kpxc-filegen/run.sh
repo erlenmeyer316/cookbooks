@@ -14,5 +14,6 @@ fi
 PW=$(echo "${KPXC_PASSWORD}" | keepassxc-cli show -qsa password "${KPXC_VAULT}" "KeepassXC WebDAV")
 USER=$(echo "${KPXC_PASSWORD}" | keepassxc-cli show -qsa username "${KPXC_VAULT}" "KeepassXC WebDAV")
 URL=$(echo "${KPXC_PASSWORD}" | keepassxc-cli show -qsa url "${KPXC_VAULT}" "KeepassXC WebDAV")
-
+MNT=$(echo "${KPXC_PASSWORD}" | keepassxc-cli show -qsa mount "${KPXC_VAULT}" "KeepassXC WebDAV")
+echo "${MNT}"
 printf "${URL}		${USER} ${PW}" > secretfile
