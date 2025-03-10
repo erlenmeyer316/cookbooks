@@ -1,29 +1,32 @@
-function Function1 {
-    param(
-        [string]$Arg1,
-        [string]$Arg2
-    )
-    Write-Host "Function1 called with arguments: $Arg1, $Arg2"
+## To add pscmdarg as a new command in your shell at the following to your $PROFILE
+#function pscmdarg {
+#    $command = $args[0]
+#    $arguments = $args[1..($args.Length - 1)]
+#    & "C:\<PATH_TO>\cookbooks\shell\ps_command_argument\run.ps1"  $command $arguments
+#  }
+
+function Function1 {     
+    $argList = $($args | Join-String -DoubleQuote -Separator ',')
+    Write-Host "Function1 called with arguments: $argList"
 }
 
 function Function2 {
-    param(
-        [string]$Arg1
-    )
-    Write-Host "Function2 called with argument: $Arg1"
+    $argList = $($args | Join-String -DoubleQuote -Separator ',')
+    Write-Host "Function2 called with argument: $argList"
 }
 
 $command = $args[0]
-$arguments = @($args[1..$args.length])
+$arguments = $args[1]
 
 switch ($command) {
     "Function1" {
-        Function1 -Arg1 $arguments[0] -Arg2 $arguments[1]
+        Function1 $arguments
     }
     "Function2" {
-        Function2 -Arg1 $arguments[0]
+        Function2 $arguments
     }
     default {
         Write-Host "Invalid command: $command"
     }
 } 
+
